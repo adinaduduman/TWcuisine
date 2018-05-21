@@ -24,19 +24,27 @@
   <a href="contact.html" class="right">Contact</a>
   <a href="desprenoi.html" class="right">Despre noi</a>
   <a href="register.html" class="right"> Register </a>
-  <a href="login.html" class="right"> Login </a>
+  <a href="logare.html" class="right"> Login </a>
 </div>
 
-<h2 style="text-align:center"> Ghiduri interactive si resurse suplimentare</h2>
-<div class="resurse">
+<form action="/action_page.php">
+  <div class="imgcontainer">
+    <img src="login.png" alt="Avatar" class="avatar">
+  </div>
 
-	<p>&#8226; <a href="https://www.gustos.ro/sfaturi-culinare/sfaturi-practice/15-secrete-din-bucatarie-pe-care-nimeni-nu-ti-le-a-spus-pana-acum-1.html" style="color:black"> Sfaturi culinare </a></p>
+  <div class="container">
+    <label for="uname"><b>Nume utilizator</b></label>
+    <input type="text" placeholder="Introduceti numele" name="uname" required>
 
-	<p>&#8226; <a href="https://www.lauraadamache.ro/" style="color:black"> Retete Laura Adamache </a></p>
-	
-	<p>&#8226; <a href="http://www.kamis.ro/stiati-ca" style="color:black"> Stiati ca..</a></p>
-</div>
-
-
+    <label for="psw"><b>Parola</b></label>
+    <input type="password" placeholder="Introduceti parola" name="psw" required>
+        
+    <button type="submit">Conecteaza-te</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Tine minte
+    </label>
+  </div>
+  </div>
+</form>
 </body>
 </html>

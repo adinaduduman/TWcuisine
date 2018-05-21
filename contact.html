@@ -19,10 +19,12 @@
 <div class="navbar">
 
   <a href="proiect.html">Acasa </a>
-  <a href="retete.html">Retete </a>
+  <a href="proiect.html">Retete </a>
  <a href="alteresurse.html"> Resurse </a>
   <a href="contact.html" class="right">Contact</a>
   <a href="desprenoi.html" class="right">Despre noi</a>
+  <a href="register.html" class="right"> Register </a>
+  <a href="login.html" class="right"> Login </a>
 </div>
 
 <h2 style="text-align:center"> Echipa noastra va este recunoscatoare pentru implicare! </h2>
@@ -35,13 +37,13 @@ Daca vreti sa stiti mai multe despre o anumita reteta de mancare publicata de un
 
 <div class="container">
   <form action="/action_page.php">
-    <label for="fname">Nume</label>
+    <label for="fname"><b>Nume</b></label>
     <input type="text" id="fname" name="firstname" placeholder="Numele tau..">
 
-    <label for="lname">Prenume</label>
+    <label for="lname"><b>Prenume</b></label>
     <input type="text" id="lname" name="lastname" placeholder="Prenumele tau..">
 
-    <label for="country">Tara</label>
+    <label for="country"><b>Tara</b></label>
     <select id="country" name="country">
 	  <option value="usa">Romania</option>
       <option value="australia">Australia</option>
@@ -53,10 +55,12 @@ Daca vreti sa stiti mai multe despre o anumita reteta de mancare publicata de un
 	  
     </select>
 
-    <label for="subject">Subiect</label>
+    <label for="subject"><b>Subiect</b></label>
     <textarea id="subject" name="subject" placeholder="Scrieti mesajul.." style="height:200px"></textarea>
 
-    <a href="mesaj.html"> Trimite </a>
+      <div class="clearfix">
+      <button type="submit" class="signupbtn"><a href="mesaj.html">Trimite </a></button>
+    </div>
 
   </form>
 </div>
