@@ -6,8 +6,10 @@
 <title>Retete pentru regim alimentar special</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="wrapper.js"></script>
 </head>
 <body>
+
 <div class="header">
 <a href="proiect.html">
   <img src="img.png" alt="Image">
@@ -37,6 +39,21 @@
 	<p>&#8226; <a href="http://www.kamis.ro/stiati-ca" style="color:black"> Stiati ca..</a></p>
 </div>
 
+<h1 class="score"></h1>
+    <div class="header">
+      <h1 class="questionNumber"></h1>
+      <h2 class="question"></h2>
+    </div>
+
+    <form name="form1">
+      <div class="answers">
+        <input type="radio" name="radioChoice"> <label></label><br>
+        <input type="radio" name="radioChoice"> <label></label><br>
+        <input type="radio" name="radioChoice"> <label></label><br>
+        <div class="button1"><button type="button" onclick="next()">Next</button></div>
+        <div class="button1"><button type="button" onclick="back()">Back</button></div>
+      </div>
+    </form>
 
 </body>
 </html>

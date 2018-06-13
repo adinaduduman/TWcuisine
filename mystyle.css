@@ -447,5 +447,50 @@ a:link, a:visited
 }
 
 
+/*Pentru quizz*/
+
+.question {
+  text-align: center;
+  font-size: 2em;
+}
+
+.questionNumber {
+  text-align: center;
+  padding: 2em;
+  font-size: 1.5em;
+}
+
+.answers {
+  font-size: 1em;
+}
+
+.answers label {
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+
+.answers input {
+  margin-left: 46em;
+  vertical-align: middle;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.button1 {
+  text-align: center;
+}
+
+.answers button {
+  width: 5%;
+  padding: .5em;
+  margin: 2.5em;
+}
+
+.score {
+  text-align: center;
+}
+
+
+
 </style>
 </head>
