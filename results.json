@@ -1,22 +1,22 @@
 {
     "Retete": [
         {
-            "titlu": "Mamaliga",
-            "timp": "30min",
-            "ingresiente": "malai, apa, sare",
-            "descriere": "fa mamaliga"
+            "titlu": "Pui vienez",
+            "timp": "10min",
+            "ingresiente": "pui\r\nvienez",
+            "descriere": "puvire"
         },
         {
-            "titlu": "dada",
+            "titlu": "Cheesecake",
             "timp": "10min",
-            "ingresiente": "nici unul",
-            "descriere": "te descurci"
+            "ingresiente": "cheese\r\ncake",
+            "descriere": "cheesecake"
         },
         {
-            "titlu": "titlu",
+            "titlu": "Oatmeal",
             "timp": "10min",
-            "ingresiente": "adsa, cds",
-            "descriere": "cfsd"
+            "ingresiente": "pachet aluat foitaj\r\nlinguri crem\u0103 de ciocolat\u0103\r\npahar mare sm\u00e2nt\u00e2n\u0103\r\ng\u0103lbenu\u015furi\r\nportocale\r\n50 g ciocolat\u0103 ras\u0103 sau 2 linguri fulgi de ciocolat\u0103",
+            "descriere": " Tart\u0103 cu portocale \u015fi ciocolat\u0103 foarte simpl\u0103, gata \u00een 30 de minute. Trebuie s\u0103 \u00eencerci aceast\u0103 re\u0163et\u0103.\r\n\r\n1.   \u00centr-o tav\u0103 de tart\u0103 se a\u015faz\u0103 aluatul de foitaj \u015fi ce trece peste margini se decupeaz\u0103. Se \u00een\u0163eap\u0103 fundul tartei cu furculi\u0163a.\r\n\r\n2.   Se unge fundul tartei cu crema de ciocolat\u0103 moale ca s\u0103 poat\u0103 fi \u00eentins\u0103 cu ajutorul unui cu\u0163it cu lam\u0103 lat\u0103 trecut prin ap\u0103 rece.\r\n\r\n3.   Sm\u00e2nt\u00e2na se amestec\u0103 cu g\u0103lbe-nu\u015furile \u015fi se toarn\u0103 peste crema de ciocolat\u0103, scutur\u00e2nd u\u015for tava pentru a se a\u015feza.\r\n\r\n4.   Se pun deasupra felii de portocale foarte bine cur\u0103\u0163ate \u015fi se presar\u0103 cu ciocolat\u0103 ras\u0103 sau fulgi de ciocolat\u0103. Se d\u0103 la cuptorul pre\u00eenc\u0103lzit pentru\r\n"
         }
     ]
 }

@@ -74,12 +74,23 @@ if (isset($_POST['login_user'])) {
     $results = mysqli_query($db, $query);
     if (mysqli_num_rows($results) == 1) {
       $_SESSION['username'] = $username;
-      $_SESSION['success'] = "You are now logged in";
+       $_SESSION['success'] = "You are now logged in"; 
       header('location: proiect.php');
     }else {
       array_push($errors, "Wrong username/password combination");
     }
   }
+}
+
+//logout
+//  if (!isset($_SESSION['username'])) {
+//    $_SESSION['msg'] = "You must log in first";
+//    header('location: login.php');
+//  }
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: index.php");
 }
 
 //contact form
@@ -91,13 +102,17 @@ if (isset($_POST['login_user'])) {
     $query = "INSERT INTO contact (nume, prenume, email, subiect) 
           VALUES('$nume', '$prenume', '$email', '$subiect')";
     mysqli_query($db, $query);
-    header('location: mesaj.html');
+    header('location: mesaj.php');
 
 }
 
 
 //recipies form
   if (isset($_POST['recipes_form'])) {
+  $confirmed = 0;
+   if (isset($_SESSION['username'])&& $_SESSION['username'] == "admin") {
+      $confirmed = 1;
+   }
    $titlu = mysqli_real_escape_string($db, $_POST['titlu']);
    $poze = mysqli_real_escape_string($db, $_POST['poze']);
    $stil = mysqli_real_escape_string($db, $_POST['stil']);
@@ -110,9 +125,9 @@ if (isset($_POST['login_user'])) {
 
    $username = $_SESSION['username'];
     $query = "INSERT INTO recipes (username, titlu, poze, stil, restrictii, timp, dotari, abilitati, ingrediente, descriere, confirm) 
-          VALUES('$username','$titlu', '$poze', '$stil', '$restrictii', '$timp', '$dotari', '$abilitati', '$ingrediente', '$descriere', 0)";
+          VALUES('$username','$titlu', '$poze', '$stil', '$restrictii', '$timp', '$dotari', '$abilitati', '$ingrediente', '$descriere', $confirmed)";
     mysqli_query($db, $query);
-    header('location: mesaj.html');
+    header('location: mesaj.php');
 
 }
 

@@ -26,7 +26,7 @@ Daca vreti sa stiti mai multe despre o anumita reteta de mancare publicata de un
     <textarea id="subject" name="subiect" placeholder="Scrieti mesajul.." style="height:200px"></textarea>
 
       <div class="clearfix">
-      <button type="submit" class="signupbtn" name="contact_form"><a href="mesaj.html">Trimite </a></button>
+      <button type="submit" class="btn" name="contact_form"><a href="mesaj.php">Trimite </a></button>
     </div>
 
   </form>

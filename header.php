@@ -1,4 +1,5 @@
 <?php include('server.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,11 +29,10 @@
   <a href="desprenoi.php" >Despre noi</a>
   <a href="descarca.php" >Formate auxiliare</a>
   <?php if ( isset($_SESSION['username']) ) { ?>
-  <a href="#" class="right"> <?php  echo $_SESSION['username'] ?> </a>
-  <a href="#" class="right"> Logout </a>
-   <?php } else { ?>
-
-  <a href="register.php" class="right"> Register </a>
-  <a href="login.php" class="right"> Login </a>
-   <?php  } ?>
+      <a href="index.php?logout='1'" class="right"> Logout </a>
+      <a href="" class="right"> <?php  echo $_SESSION['username'] ?> </a>
+  <?php } else { ?>
+      <a href="login.php" class="right"> Login </a>
+      <a href="register.php" class="right"> Register </a>
+   <?php } ?>
 </div>

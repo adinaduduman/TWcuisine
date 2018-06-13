@@ -25,7 +25,7 @@ Daca sunteti o bucatareasa priceputa sau un bucatar iscusit, puteti fie sa ne tr
     <select name="stil">
     <option value="vegetarian">Vegetarian</option>
     <option value="vegan">Vegan</option>
-    <option value="de post">De post</option>
+    <option value="post">De post</option>
   </select>
 
    <label for="lname"><b>Restrictii alimentare</b></label>
@@ -44,7 +44,7 @@ Daca sunteti o bucatareasa priceputa sau un bucatar iscusit, puteti fie sa ne tr
 
   <label for="lname"><b>Dotari din bucatarie</b></label>
     <select name="dotari">
-    <option value="cuptor cu microunde">Cuptor cu microunde</option>
+    <option value="microunde">Cuptor cu microunde</option>
     <option value="aragaz">Aragaz</option>
     <option value="coacere">Coacere</option>
   </select>
@@ -64,7 +64,7 @@ Daca sunteti o bucatareasa priceputa sau un bucatar iscusit, puteti fie sa ne tr
     <textarea id="subject" name="descriere" placeholder="Scrieti mesajul.." style="height:200px"></textarea>
 
       <div class="clearfix">
-      <button type="submit" class="signupbtn" name="recipes_form"><a href="mesaj.php">Trimite </a></button>
+      <button type="submit" class="btn" name="recipes_form"><span>Trimite</span></button>
     </div>
 
   </form>

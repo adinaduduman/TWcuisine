@@ -1,34 +1,45 @@
 <?php include('header.php') ?>
 
 <?php
-$recipes_check_query = "SELECT * FROM recipes WHERE confirm=1";
+unset($_GET["submit"]);
+$query_string = "confirm=1";
+foreach($_GET AS $key=>$value) {
+  $query_string .= " AND ".$key."='".$value."'";
+}
+$recipes_check_query = "SELECT * FROM recipes WHERE ".$query_string;
+//var_dump($recipes_check_query);
 $result = mysqli_query($db, $recipes_check_query);
-$recipes = mysqli_fetch_all($result);
+$recipes = mysqli_fetch_all($result, MYSQLI_ASSOC);
+//var_dump($recipes);
 ?>
 
 <div class="sidebar">
 
 <div class="filtrare">
+
+<form id="filtrare" action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">
+
 <h3> Stil de viata </h3>
-  <input name="checkbox" type="checkbox" id="Vegetarian" />
+  <input name="stil" type="radio" id="Vegetarian" value="vegetarian"/>
   <label for="Vegetarian"> Vegetarian</label>
   <br><br>
-  <input name="checkbox" type="checkbox" id="Vegan" />
+  <input name="stil" type="radio" id="Vegan" value="vegan"/>
   <label for="Vegan"> Vegan </label>
   <br><br>
-  <input name="checkbox" type="checkbox" id="Post" />
+  <input name="stil" type="radio" id="Post" value="post"/>
   <label for="Post"> De post </label>
   <br><br>
+
 </div>
 <div class="filtrare">
 <h3> Restrictii alimentare </h3>
-  <input name="checkbox" type="checkbox" id="Diabet" />
+  <input name="restrictii" type="radio" id="Diabet" value="diabet"/>
   <label for="Diabet"> Diabet</label>
   <br><br>
-  <input name="checkbox" type="checkbox" id="Alergii" />
+  <input name="restrictii" type="radio" id="Alergii" value="alergii"/>
   <label for="Alergii"> Alergii </label>
   <br><br>
-  <input name="checkbox" type="checkbox" id="Alaptare" />
+  <input name="restrictii" type="radio" id="Alaptare" value="alaptare" />
   <label for="Alaptare"> Alaptare</label>
   <br><br>
 
@@ -37,13 +48,13 @@ $recipes = mysqli_fetch_all($result);
 
 <div class="filtrare">
 <h3> Timp alocat </h3>
-  <input name="checkbox" type="checkbox" id="10min" />
+  <input name="timp" type="radio" id="10min" value="10min"/>
   <label for="10min"> 10 min</label>
   <br><br>
-  <input name="checkbox" type="checkbox" id="30min" />
+  <input name="timp" type="radio" id="30min" value="30min"/>
   <label for="30min"> 30 min </label>
   <br><br>
-  <input name="checkbox" type="checkbox" id="50min" />
+  <input name="timp" type="radio" id="50min" value="50min"/>
   <label for="50min"> 50 min </label>
   <br><br>
 
@@ -52,14 +63,14 @@ $recipes = mysqli_fetch_all($result);
 
 <div class="filtrare">
 <h3> Dotari din bucatarie </h3>
-  <input name="checkbox" type="checkbox" id="microunde" />
+  <input name="dotari" type="radio" id="microunde" value="microunde"/>
   <label for="microunde"> Cuptor cu microunde</label>
   <br><br>
-  <input name="checkbox" type="checkbox" id="aragaz" />
+  <input name="dotari" type="radio" id="aragaz" value="aragaz"/>
   <label for="aragaz"> Aragaz </label>
   <br><br>
-  <input name="checkbox" type="checkbox" id="fara" />
-  <label for="fara"> Fara coacere </label>
+  <input name="dotari" type="radio" id="coacere" value="coacere"/>
+  <label for="coacere"> Coacere </label>
   <br><br>
 
 
@@ -67,98 +78,36 @@ $recipes = mysqli_fetch_all($result);
 
 <div class="filtrare">
 <h3> Conform abilitatilor </h3>
-  <input name="checkbox" type="checkbox" id="incepator" />
+  <input name="abilitati" type="radio" id="incepator" value="incepator"/>
   <label for="incepator"> Incepator</label>
   <br><br>
-  <input name="checkbox" type="checkbox" id="avansat" />
+  <input name="abilitati" type="radio" id="avansat" value="avansat"/>
   <label for="avansat"> Avansat </label>
   <br><br>
-  <input name="checkbox" type="checkbox" id="expert" />
+  <input name="abilitati" type="radio" id="expert" value="expert"/>
   <label for="expert"> Expert </label>
   <br><br>
+  <input type="submit" name="submit" value="filtreaza" />
 
 
 </div>
+</form>
 </div>
 <div class="main">
-<div class="row"> 
-
-   <div class="column">
-        <a href="ingrediente.php"><img src="a.jpg" alt="Image"></a>
-    <h2>Smoothie</h2>
-   
-  </div>
-
-  <div class="column">
-  <a href="ingrediente.html">
-    <img src="p.jpg" alt="Image">
-    </a>
-    <h2>Oua</h2>
-   
-  </div>
-
-  <div class="column">
-    <a href="ingrediente.html">
-    <img src="pizza.jpg" alt="Image">
-    </a>
-    <h2>Pizza</h2>
-   
-  </div>
-  </div>
-
-  <div class="row"> 
-
-  <div class="column">
-   <a href="ingrediente.html">
-    <img src="1.jpg" alt="Image">
-    </a>
-    <h2>Paste</h2>
-    
-  </div>
-
-  <div class="column">
-  <a href="ingrediente.html">
-    <img src="a.jpg" alt="Image">
-    </a>
-    <h2>Smoothie</h2>
-   
-  </div>
-
-  <div class="column">
-  <a href="ingrediente.html">
-    <img src="p.jpg" alt="Image">
-    </a>
-    <h2>Oua</h2>
-   
-  </div>
-
-    </div>
-  <div class="row"> 
-
-  <div class="column">
-  <a href="ingrediente.html">
-    <img src="1.jpg" alt="Image">
-    </a>
-    <h2>Mamaliga</h2>
-    
-  </div>
-
-  <div class="column">
-  <a href="ingrediente.html">
-    <img src="1.jpg" alt="Image">
-    </a>
-    <h2>Fasole</h2>
-   
-  </div>
-
-  <div class="column">
-  <a href="ingrediente.html">
-    <img src="1.jpg" alt="Image">
-    </a>
-    <h2>Oua</h2>
-   
-  </div>
-  </div>
+	<?php  for ($i = 0; $i < count($recipes); $i++) {
+				if ($i % 3 == 0) { ?>
+					<div class="row">
+		  <?php } ?>
+				<div class="column">
+					<a href="ingrediente.php?id=<?= $recipes[$i]["id"] ?>"><img src="<?= explode("\n", $recipes[$i]["poze"])[0] ?>" alt="Image"></a>
+					<h2><?= $recipes[$i]["titlu"] ?></h2>
+				</div>
+	<?php       if ($i % 3 == 2 || $i == count($recipes) - 1) { ?>
+					</div>
+	      <?php } ?>
+	<?php  }  ?>
+	  
+</div>
 
 </div>
 
