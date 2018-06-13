@@ -1,0 +1,22 @@
+{
+    "Retete": [
+        {
+            "titlu": "Mamaliga",
+            "timp": "30min",
+            "ingresiente": "malai, apa, sare",
+            "descriere": "fa mamaliga"
+        },
+        {
+            "titlu": "dada",
+            "timp": "10min",
+            "ingresiente": "nici unul",
+            "descriere": "te descurci"
+        },
+        {
+            "titlu": "titlu",
+            "timp": "10min",
+            "ingresiente": "adsa, cds",
+            "descriere": "cfsd"
+        }
+    ]
+}
