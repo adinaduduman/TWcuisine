@@ -18,9 +18,14 @@ while($row=mysqli_fetch_array($result)) {
 
 $response['Retete'] = $posts;
 
-$fp = fopen('results.json', 'w');
-fwrite($fp, json_encode($response, JSON_PRETTY_PRINT));
-fclose($fp);
+$json = str_replace(array("\\r","\\n","\\t"), "",json_encode($response,JSON_PRETTY_PRINT));
+
+$json = preg_replace('#(?<!\\\\)(\\$|\\\\)#', "", $json);
+
+echo'<pre>';
+print_r($json);
+echo'</pre>';
+
 
 
 ?> 
