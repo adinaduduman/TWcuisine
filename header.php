@@ -26,6 +26,7 @@
  <a href="alteresurse.php"> Resurse </a>
   <a href="contact.php" >Contact</a>
   <a href="desprenoi.php" >Despre noi</a>
+  <a href="descarca.php" >Formate auxiliare</a>
   <?php if ( isset($_SESSION['username']) ) { ?>
   <a href="#" class="right"> <?php  echo $_SESSION['username'] ?> </a>
   <a href="#" class="right"> Logout </a>
