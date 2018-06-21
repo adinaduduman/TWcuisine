@@ -130,7 +130,7 @@ input[type=submit]:hover {
 
 /*style reteta*/
 .row {
-  display: flex;
+    width: 100%;
   padding: 0 50px;
   float:right;
 }
@@ -138,14 +138,9 @@ input[type=submit]:hover {
 
 /* creez 3 coloane pe aceeasi linie */
 .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 1%;
-  margin-right: auto;
-  display:inline;
-  margin-left:1%;
-  margin-top:1%;
-  float:left;
+  width: 25%;
+  float: left;
+  padding: 10px;
 }
 
 .column img {
@@ -170,7 +165,7 @@ input[type=submit]:hover {
 }
 
 .main {
-  width: 90%;
+  width: calc(100% - 200px);
   float: right;
 }
 
@@ -213,24 +208,18 @@ input[type=submit]:hover {
 /*style ingrediente*/
 
 .reteta {
-  float: right;
-  margin-left: 80px;
-  margin-right: 150px;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  font-size: small;
+  float: left;
+  width: 30%;
+  font-size: 150%;
   font-family: arial;
   text-align: left;
-  width: 700px;
+  padding: 25px;
 }
 
 .image {
-  
   float:left;
-    margin-left: 80px;
-  margin-right: auto;
-  margin-top: 25px;
-  margin-bottom: 100px;
+  width: 70%;
+  padding: 0 25px 25px;
 }
 
 
@@ -494,3 +483,19 @@ a:link, a:visited
   text-align: center;
 }
 
+#searchForm{
+    float: left;
+    max-width: 250px;
+    margin-top: 25px;
+    margin-left: 50px;
+}
+#searchForm input[type="text"]{
+    float: left;
+    width: 175px;
+    margin: 0;
+}
+#searchForm input[type="submit"]{
+    float: left;
+    width: 75px;
+    margin: 0;
+}
