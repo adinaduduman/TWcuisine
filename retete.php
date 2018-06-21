@@ -1,10 +1,18 @@
 <?php include('header.php') ?>
 
 <?php
-unset($_GET["submit"]);
 $query_string = "confirm=1";
-foreach($_GET AS $key=>$value) {
-  $query_string .= " AND ".$key."='".$value."'";
+if(isset($_GET["submit"])){
+    unset($_GET["submit"]);
+    
+    foreach($_GET AS $key=>$value) {
+      $query_string .= " AND ".$key."='".$value."'";
+    }
+}
+if(isset($_GET["searchSubmit"])){
+    unset($_GET["searchSubmit"]);
+    
+    $query_string .= " AND (titlu LIKE '%".$_GET["search"]."%' OR ingrediente LIKE '%".$_GET["search"]."%')";
 }
 $recipes_check_query = "SELECT * FROM recipes WHERE ".$query_string;
 //var_dump($recipes_check_query);
@@ -94,6 +102,10 @@ $recipes = mysqli_fetch_all($result, MYSQLI_ASSOC);
 </form>
 </div>
 <div class="main">
+    <form id="searchForm" action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">
+        <input type="text" name="search" value="<?php echo @$_GET["search"]; ?>" />
+        <input type="submit" name="searchSubmit" value="Cauta" />
+    </form>
 	<?php  for ($i = 0; $i < count($recipes); $i++) {
 				if ($i % 3 == 0) { ?>
 					<div class="row">

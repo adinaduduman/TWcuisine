@@ -30,7 +30,7 @@
   <a href="descarca.php" >Formate auxiliare</a>
   <?php if ( isset($_SESSION['username']) ) { ?>
       <a href="index.php?logout='1'" class="right"> Logout </a>
-      <a href="" class="right"> <?php  echo $_SESSION['username'] ?> </a>
+      <a href="proiect.php" class="right"> <?php  echo $_SESSION['username'] ?> </a>
   <?php } else { ?>
       <a href="login.php" class="right"> Login </a>
       <a href="register.php" class="right"> Register </a>

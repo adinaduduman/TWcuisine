@@ -9,7 +9,7 @@ while($row=mysqli_fetch_array($result)) {
   $timp=$row['timp'];
   $ingrediente=$row['ingrediente']; 
   $descriere=$row['descriere'];
-  $posts[] = array('titlu'=> $titlu, 'timp'=> $timp,'ingresiente'=> $ingrediente, 'descriere'=> $descriere);
+  $posts[] = array('titlu'=> $titlu, 'timp'=> $timp,'ingrediente'=> str_replace("°C","grade C",str_replace("½","jumatate ",str_replace("⅓","o treime",str_replace("\r\n",", ",$ingrediente)))), 'descriere'=> str_replace("\r\n","",$descriere));
 } 
 $response['Retete'] = $posts;
 echo'<pre>';

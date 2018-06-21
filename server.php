@@ -6,8 +6,6 @@ $username = "";
 $email    = "";
 $errors = array(); 
 
-
-
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'register');
 
@@ -132,5 +130,3 @@ if (isset($_GET['logout'])) {
     header('location: mesaj.php');
 
 }
-
-?>

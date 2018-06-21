@@ -10,7 +10,8 @@ for ( $i = 0; $i < $fields; $i++ )
 	$header .= $fieldinfo->name . ", ";
 }
 $header = rtrim($header, ", ");
-$data="<br>";
+
+$data = "";
 while( $row = mysqli_fetch_row( $export ) )
 {
     $line = '';
@@ -22,17 +23,16 @@ while( $row = mysqli_fetch_row( $export ) )
         }
         else
         {
-            $value = str_replace( '"' , '""' , $value );
             $value = $value . ", ";
         }
         $line .= $value;
     }
-    $data .= rtrim( $line, ", ") . "<br>";
+    $data .= rtrim( $line, ", ") . PHP_EOL;
 }
-//$data = str_replace( "\r" , "" , $data );
+
 if ( $data == "" )
 {
     $data = "(0) Records Found!";                        
 }
-echo $header . $data;
+echo $header . PHP_EOL . $data;
 ?> 
