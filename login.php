@@ -1,5 +1,3 @@
-
-
 <?php include('header.php') ?>
 
 <form action="login.php" method="POST">

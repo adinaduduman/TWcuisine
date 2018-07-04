@@ -210,7 +210,7 @@ input[type=submit]:hover {
 .reteta {
   float: left;
   width: 30%;
-  font-size: 150%;
+  font-size: small;
   font-family: arial;
   text-align: left;
   padding: 25px;

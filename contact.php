@@ -1,5 +1,3 @@
-
-
 <?php include('header.php') ?>
 
 <h2 style="text-align:center"> Echipa noastra va este recunoscatoare pentru implicare! </h2>
